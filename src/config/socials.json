@@ -1,0 +1,12 @@
+{
+  "github": {
+    "url": "https://github.com/richardswesterhof",
+    "name": "GitHub",
+    "icon": ["fab", "github"]
+  },
+  "linkedin": {
+    "url": "https://linkedin.com/in/richardswesterhof",
+    "name": "LinkedIn",
+    "icon": ["fab", "linkedin"]
+  }
+}
