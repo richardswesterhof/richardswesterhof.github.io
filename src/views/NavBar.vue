@@ -4,7 +4,8 @@
   <div class="navbar">
     <router-link :to="{name: 'Home'}">Home</router-link> |
     <router-link :to="{name: 'About'}">About</router-link> |
-    <router-link :to="{name: 'Socials'}">Socials</router-link>
+    <router-link :to="{name: 'Socials'}">Socials</router-link> |
+    <router-link :to="{name: 'Curriculum Vitae'}">Curriculum Vitae</router-link>
   </div>
 </template>
 
