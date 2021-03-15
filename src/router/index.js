@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '@/views/Home.vue'
 
 const routes = [
   {
@@ -13,8 +13,21 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue')
+  },
+  {
+    path: '/socials',
+    name: 'Socials',
+    // route level code-splitting
+    // this generates a separate chunk (socials.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "socials" */ '@/views/Socials.vue')
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import(/* webpackChunkName: "notfound" */ '@/views/NotFound.vue')
+  },
 ]
 
 const router = createRouter({
