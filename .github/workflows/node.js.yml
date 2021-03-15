@@ -1,0 +1,27 @@
+name: Deploy to GitHub Pages
+# when something is pushed to main
+on:
+  push:	
+    branches:	
+      - main
+
+# deploy to github pages
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest    
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@main
+    - name: Install node and npm
+      uses: actions/setup-node@main
+    - name: Install node dependencies
+      run: npm install
+    - name: Build the source files
+      run: npm build
+    - name: Deploy built files to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        publish_branch: gh-pages
