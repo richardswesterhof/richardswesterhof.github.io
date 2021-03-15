@@ -1,7 +1,9 @@
 .DS_Store
 node_modules
 # we actually want the dist folder for github to host our site
-# /dist
+# edit: scratch that, I set up a github action that automatically takes care of this
+# so now dist is redundant to commit
+/dist
 
 
 # local env files
