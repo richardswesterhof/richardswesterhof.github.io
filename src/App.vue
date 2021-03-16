@@ -7,7 +7,12 @@
 import NavBar from "@/views/NavBar";
 
 export default {
-  components: {NavBar}
+  components: {NavBar},
+
+  // quick ugly fix to trigger language action on page load
+  created() {
+    this.$store.dispatch("changeLanguagePack", {language: "english"});
+  }
 }
 </script>
 
