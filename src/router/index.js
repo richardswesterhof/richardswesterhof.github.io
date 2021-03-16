@@ -26,6 +26,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "cv" */ '@/views/CurriculumVitae.vue')
   },
   {
+    path: '/isithisbirthday',
+    name: 'Birthday',
+    component: () => import(/* webpackChunkName: "bday" */ '@/views/Birthday.vue')
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import(/* webpackChunkName: "notfound" */ '@/views/NotFound.vue')

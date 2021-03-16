@@ -1,12 +1,17 @@
 {
+  "linkedin": {
+    "url": "https://linkedin.com/in/richardswesterhof",
+    "name": "LinkedIn",
+    "icon": ["fab", "linkedin"]
+  },
   "github": {
     "url": "https://github.com/richardswesterhof",
     "name": "GitHub",
     "icon": ["fab", "github"]
   },
-  "linkedin": {
-    "url": "https://linkedin.com/in/richardswesterhof",
-    "name": "LinkedIn",
-    "icon": ["fab", "linkedin"]
+  "dockerhub": {
+    "url": "https://hub.docker.com/u/richardswesterhof",
+    "name": "Docker Hub",
+    "icon": ["fab", "docker"]
   }
 }
