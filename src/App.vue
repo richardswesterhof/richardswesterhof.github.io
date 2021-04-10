@@ -1,5 +1,5 @@
 <template>
-  <NavBar/>
+  <NavBar ref="navbar"/>
   <router-view v-slot="{ Component }">
     <transition :name="transition" mode="out-in">
       <component :is="Component"/>
@@ -15,25 +15,23 @@ import NavBar from "@/views/NavBar";
 export default {
   components: {NavBar},
 
-  // quick ugly fix to trigger language action on page load
-  created() {
-    this.$store.dispatch("changeLanguagePack", {language: "english"});
-  },
-
   data() {
     return {
-      transition: "fade",
+      transition: "slide-left",
     }
   },
 
   // watch the `$route` to determine the transition to use
-  // watch: {
-  //   '$route' (to, from) {
-  //     const toDepth = to.path.split('/').length
-  //     const fromDepth = from.path.split('/').length
-  //     this.transition = toDepth < fromDepth ? 'slide-right' : 'slide-left'
-  //   }
-  // }
+  watch: {
+    '$route' (to, from) {
+      // construct a list of names of the links we have in the navbar
+      let linkNames = this.$refs.navbar.links.map((link) => link.to.name)
+      // if the link we are going to comes after the link we were at, slide left, else slide right
+      this.transition = linkNames.indexOf(to.name) >= linkNames.indexOf(from.name) ?
+          'slide-left' :
+          'slide-right'
+    }
+  }
 }
 </script>
 
@@ -47,6 +45,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: var(--primary-color);
+  /* needed here to prevent scrollbars from showing up while transition is happening
+     and because it doesn't work anywhere else :)
+   */
+  overflow: hidden;
 }
 
 a {
@@ -58,36 +60,29 @@ a.router-link-exact-active {
   color: var(--secondary-color);
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
+/* stuff to make transitions look very nice */
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition-duration: 275ms;
+  transition-property: height, opacity, transform;
+  transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  overflow: hidden;
 }
 
-.fade-enter-from,
-.fade-leave-to {
+.slide-left-enter-from,
+.slide-right-leave-to {
   opacity: 0;
+  transform: translate(2em, 0);
+  overflow: hidden;
 }
+
+.slide-left-leave-to,
+.slide-right-enter-from {
+  opacity: 0;
+  transform: translate(-2em, 0);
+  overflow: hidden;
+}
+
 </style>
-
-<!--<style lang="sass">-->
-
-<!--.slide-left-enter-active,-->
-<!--.slide-left-leave-active,-->
-<!--.slide-right-enter-active,-->
-<!--.slide-right-leave-active-->
-<!--  transition-duration: 0.5s-->
-<!--  transition-property: height, opacity, transform-->
-<!--  transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1)-->
-<!--  overflow: hidden-->
-
-<!--.slide-left-enter,-->
-<!--.slide-right-leave-active-->
-<!--  opacity: 0-->
-<!--  transform: translate(2em, 0)-->
-
-<!--.slide-left-leave-active,-->
-<!--.slide-right-enter-->
-<!--  opacity: 0-->
-<!--  transform: translate(-2em, 0)-->
-
-<!--</style>-->

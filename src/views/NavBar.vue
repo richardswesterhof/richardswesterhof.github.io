@@ -2,16 +2,27 @@
 
 <template>
   <div class="navbar">
-    <router-link :to="{name: 'Home'}">Home</router-link> |
-    <router-link :to="{name: 'About'}">About</router-link> |
-    <router-link :to="{name: 'Socials'}">Socials</router-link> |
-    <router-link :to="{name: 'Curriculum Vitae'}">Curriculum Vitae</router-link>
+    <template v-for="(link, index) in links" v-bind:key="link.to.name">
+      <router-link :to="link.to">{{link.displayName}}</router-link>
+      <template v-if="index < links.length - 1"> | </template>
+    </template>
   </div>
 </template>
 
 <script>
 export default {
-  name: "NavBar"
+  name: "NavBar",
+
+  data() {
+    return {
+      links: [
+          {to: {name: "Home"}, displayName: "Home"},
+          {to: {name: "About"}, displayName: "About"},
+          {to: {name: "Socials"}, displayName: "Socials"},
+          {to: {name: "Curriculum Vitae"}, displayName: "Curriculum Vitae"},
+      ]
+    }
+  },
 }
 </script>
 
