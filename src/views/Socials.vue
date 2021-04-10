@@ -15,7 +15,7 @@
 
 <script>
 import socials from "@/config/socials.json"
-import SocialCard from "@/components/social-links/SocialCard";
+import SocialCard from "@/components/SocialCard";
 
 export default {
   name: "Socials",
