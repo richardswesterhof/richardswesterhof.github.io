@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{f820:function(n,t,e){"use strict";e.r(t);var o=e("7a23"),c={class:"about"},r=Object(o["h"])("h1",null,"About me...",-1);function u(n,t,e,u,a,b){var s=Object(o["x"])("UnderConstruction");return Object(o["q"])(),Object(o["e"])("div",c,[r,Object(o["h"])(s)])}var a=e("7816"),b={components:{UnderConstruction:a["a"]}};b.render=u;t["default"]=b}}]);
+//# sourceMappingURL=about.695ab4db.js.map
