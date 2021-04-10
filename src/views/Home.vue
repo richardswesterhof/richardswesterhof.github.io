@@ -1,7 +1,9 @@
 <template>
-  <Hero/>
+  <div>
+    <Hero/>
 
-  <UnderConstruction></UnderConstruction>
+    <UnderConstruction></UnderConstruction>
+  </div>
 </template>
 
 <script>
