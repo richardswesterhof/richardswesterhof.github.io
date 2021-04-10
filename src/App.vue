@@ -1,19 +1,25 @@
 <template>
-  <NavBar/>
-  <router-view/>
+  <v-app>
+    <v-main>
+      <v-container fluid>
+        <NavBar/>
+        <router-view/>
+      </v-container>
+
+    </v-main>
+  </v-app>
 </template>
 
 <script>
+
 import NavBar from "@/views/NavBar";
-
 export default {
-  components: {NavBar},
+  name: 'App',
 
-  // quick ugly fix to trigger language action on page load
-  created() {
-    this.$store.dispatch("changeLanguagePack", {language: "english"});
-  }
-}
+  components: {
+    NavBar
+  },
+};
 </script>
 
 <style>
@@ -36,4 +42,10 @@ a {
 a.router-link-exact-active {
   color: var(--secondary-color);
 }
+
+/* remove the scrollbar automatically */
+html {
+  overflow-y: auto;
+}
+
 </style>

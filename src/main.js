@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import vuetify from './plugins/vuetify'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -10,4 +11,4 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(fas, fab)
 
-createApp(App).use(store).use(router).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
+createApp(App).use(store).use(router).use(vuetify).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
