@@ -40,7 +40,8 @@ export default {
 
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /*font-family: Avenir, Helvetica, Arial, sans-serif;*/
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -54,6 +55,7 @@ export default {
 a {
   font-weight: bold;
   color: var(--primary-color);
+  text-decoration: none;
 }
 
 a.router-link-exact-active {
@@ -83,6 +85,17 @@ a.router-link-exact-active {
   opacity: 0;
   transform: translate(-2em, 0);
   overflow: hidden;
+}
+
+h1 {
+  border-radius: 10px;
+  width: fit-content;
+  margin: 0 auto 16px auto;
+  padding: 4px 16px;
+  color: white;
+  font-weight: lighter;
+  background: rgb(44,62,80);
+  background: linear-gradient(135deg, rgba(44,62,80,1) 0%, rgba(80,129,185,1) 100%);
 }
 
 </style>
