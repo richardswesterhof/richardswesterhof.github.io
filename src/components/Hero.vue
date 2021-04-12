@@ -4,6 +4,7 @@
   <h1>
     Richard Westerhof
   </h1>
+  <UnderConstruction></UnderConstruction>
   <h2>
 <!--    {{nestedPropertyExists($store, "state", "strings", "hero", "subtext") ? $store.state.strings.hero.subtext : "[ERROR]"}}-->
     The man, the myth, the legend
@@ -12,9 +13,12 @@
 
 <script>
 // import nestedUtils from "@/utils/nestedUtils"
+import UnderConstruction from "@/components/UnderConstruction";
 
 export default {
   name: "Hero",
+
+  components: {UnderConstruction},
 
   // methods: {
   //   nestedPropertyExists: nestedUtils.nestedPropertyExists,

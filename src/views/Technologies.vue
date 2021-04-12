@@ -1,18 +1,19 @@
-<!-- Created by Richard on 15/03/2021-->
+<!-- Created by Richard on 11/04/2021-->
 
 <template>
   <div>
+    <h1>Technologies used on this page:</h1>
+
+
     <UnderConstruction/>
-    eventually I'll put my CV here as an embedded pdf
   </div>
 </template>
 
 <script>
 import UnderConstruction from "@/components/UnderConstruction";
-
 export default {
-  name: "CurriculumVitae",
-  components: {UnderConstruction},
+  name: "Technologies",
+  components: {UnderConstruction}
 }
 </script>
 

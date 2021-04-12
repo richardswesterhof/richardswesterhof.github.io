@@ -2,9 +2,9 @@
 
 <template>
   <!-- TODO: make this pretty (maybe? idk looks kinda alright the way it is right now tbh )-->
-  <a :href="url" target="_blank" class="social-card">
+  <a :href="url" target="_blank">
     <font-awesome-icon :icon="icon" size="5x"></font-awesome-icon>
-    <p>{{name}}</p>
+    <p style="margin-top: 6px">{{name}}</p>
   </a>
 </template>
 
@@ -33,9 +33,5 @@ export default {
 </script>
 
 <style scoped>
-  .social-card {
-    display: inline-block;
-    padding-left: 10pt;
-    padding-right: 10pt;
-  }
+
 </style>

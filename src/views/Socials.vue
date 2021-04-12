@@ -6,7 +6,7 @@
       You can find me on:
     </h1>
     <template v-for="social in socials" :key="social.name">
-      <SocialCard :icon="social.icon" :name="social.name" :url="social.url"/>
+      <SocialCard :icon="social.icon" :name="social.name" :url="social.url" class="social-card"/>
     </template>
   </div>
 
@@ -30,5 +30,9 @@ export default {
 </script>
 
 <style scoped>
-
+.social-card {
+  display: inline-block;
+  padding-left: 14pt;
+  padding-right: 14pt;
+}
 </style>

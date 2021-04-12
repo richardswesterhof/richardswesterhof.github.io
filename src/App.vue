@@ -20,6 +20,10 @@ export default {
       transition: "slide-left",
     }
   },
+  //
+  // mounted() {
+  //   this.$nextTick(this.$refs.navbar.updateGradient)
+  // }
 
   // watch the `$route` to determine the transition to use
   watch: {
@@ -30,6 +34,8 @@ export default {
       this.transition = linkNames.indexOf(to.name) >= linkNames.indexOf(from.name) ?
           'slide-left' :
           'slide-right'
+
+      this.$refs.navbar.updateGradient(linkNames.indexOf(to.name))
     }
   }
 }
@@ -40,7 +46,8 @@ export default {
 
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /*font-family: Avenir, Helvetica, Arial, sans-serif;*/
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -52,8 +59,9 @@ export default {
 }
 
 a {
-  font-weight: bold;
+  font-weight: 600;
   color: var(--primary-color);
+  text-decoration: none;
 }
 
 a.router-link-exact-active {
@@ -83,6 +91,27 @@ a.router-link-exact-active {
   opacity: 0;
   transform: translate(-2em, 0);
   overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  border-radius: 10px;
+  width: fit-content;
+  margin: 0 auto 16px auto;
+  padding: 4px 16px;
+  font-weight: 300;
+}
+
+h1 {
+  color: white;
+  background: rgb(44,62,80);
+  background: linear-gradient(135deg, rgba(44,62,80,1) 0%, rgba(80,129,185,1) 100%);
+}
+
+h5 {
+  padding: 4px 10px;
+  border-radius: 7px;
+  background: rgb(255,200,71);
+  background: linear-gradient(315deg, rgba(255,200,71,1) 50%, rgba(224,163,21,1) 100%);
 }
 
 </style>
