@@ -21,7 +21,7 @@ export default {
           {to: {name: "Socials"}, displayName: "Socials"},
           {to: {name: "Technologies"}, displayName: "Tech Stack"},
           {to: {name: "Curriculum Vitae"}, displayName: "CV"},
-          {to: {name: "Test"}, displayName: "Test"},
+          // {to: {name: "Test"}, displayName: "Test"},
       ],
 
       navLinkIdPrefix: "navbar_link_",
