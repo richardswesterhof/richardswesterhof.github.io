@@ -2,8 +2,8 @@
 
 <template>
   <div>
-    eventually I'll put my CV here as an embedded pdf
     <UnderConstruction/>
+    eventually I'll put my CV here as an embedded pdf
   </div>
 </template>
 

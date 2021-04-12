@@ -2,11 +2,8 @@
 <!-- Placeholder that can be added to any page that is still under construction -->
 
 <template>
-  <div>
-    <p>
-      this page is still under construction
-    </p>
-  </div>
+  <h5> This page is still under construction</h5>
+  <p></p>
 </template>
 
 <script>
