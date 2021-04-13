@@ -3,12 +3,11 @@
 
 <template>
   <h5> This page is still under construction</h5>
-  <p></p>
 </template>
 
 <script>
 export default {
-  name: "UnderConstruction"
+  name: "UnderConstruction",
 }
 </script>
 

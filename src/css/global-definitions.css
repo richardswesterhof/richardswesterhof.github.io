@@ -2,10 +2,13 @@
     /* shortcuts to the colors that should be used as primary and secondary */
     --primary-color: var(--dark-blue-grey);
     --secondary-color: var(--blue-grey);
+    --intermediate-color: var(--medium-blue-grey);
 
     /* some colors that I like */
     --dark-blue-grey: #2c3e50;
+    --medium-blue-grey: #42668F;
     --blue-grey: #5081b9;
     --pastel-blue-grey: #81a4cd;
     --light-blue-grey: #99aab5;
+
 }

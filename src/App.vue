@@ -59,13 +59,9 @@ export default {
 }
 
 a {
-  font-weight: 600;
+  /*font-weight: 600;*/
   color: var(--primary-color);
   text-decoration: none;
-}
-
-a.router-link-exact-active {
-  color: var(--secondary-color);
 }
 
 /* stuff to make transitions look very nice */
@@ -73,7 +69,7 @@ a.router-link-exact-active {
 .slide-left-leave-active,
 .slide-right-enter-active,
 .slide-right-leave-active {
-  transition-duration: 275ms;
+  transition-duration: 250ms;
   transition-property: height, opacity, transform;
   transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
   overflow: hidden;
@@ -112,6 +108,13 @@ h5 {
   border-radius: 7px;
   background: rgb(255,200,71);
   background: linear-gradient(315deg, rgba(255,200,71,1) 50%, rgba(224,163,21,1) 100%);
+}
+
+h4 {
+  border-radius: 8px;
+  color: white;
+  background: rgb(255,10,10);
+  background: linear-gradient(315deg, rgba(255,10,10,1) 50%, rgba(117,2,2,1) 100%);
 }
 
 </style>

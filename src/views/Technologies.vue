@@ -1,19 +1,17 @@
 <!-- Created by Richard on 11/04/2021-->
 
 <template>
-  <div>
-    <h1>Technologies used on this page:</h1>
+  <ViewTab title="Technologies used on this page:" :under-construction="true">
 
-
-    <UnderConstruction/>
-  </div>
+  </ViewTab>
 </template>
 
 <script>
-import UnderConstruction from "@/components/UnderConstruction";
+import ViewTab from "@/views/ViewTab";
+
 export default {
   name: "Technologies",
-  components: {UnderConstruction}
+  components: {ViewTab},
 }
 </script>
 

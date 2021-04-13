@@ -1,18 +1,27 @@
 <!-- Created by Richard on 15/03/2021-->
 
 <template>
-  <div class="navbar gradient-text" id="navbar_container">
+  <div class="navbar" id="navbar_container">
     <template v-for="(link, index) in links" v-bind:key="link.to.name">
-      <router-link :to="link.to" :id="navLinkIdPrefix + link.to.name" class="nav-link gradient-text">{{link.displayName}}</router-link>
+      <extended-router-link
+          :to="link.to"
+          :id="navLinkIdPrefix + link.to.name"
+          active-class="with_background active"
+          inactive-class="without_background"
+          class="nav-link"
+      >
+        {{link.displayName}}
+      </extended-router-link>
       <template v-if="index < links.length - 1"> | </template>
     </template>
   </div>
 </template>
 
 <script>
+import ExtendedRouterLink from "@/components/ExtendedRouterLink";
 export default {
   name: "NavBar",
-
+  components: {ExtendedRouterLink},
   data() {
     return {
       links: [
@@ -81,17 +90,34 @@ export default {
 
 <style scoped>
 .navbar {
-  padding: 30px 10px 30px 10px;
+  padding: 30px 0;
   /*background: linear-gradient(90deg, var(--primary-color) 576px, var(--secondary-color) 576px, var(--secondary-color) 636px, var(--primary-color) 636px);*/
 }
 
 .nav-link {
-  padding: 0 8px 0 8px;
+  padding: 0 8px;
+  border-radius: 6px;
+  transition: all 250ms ease;
+  background: linear-gradient(to bottom, transparent 50%, var(--intermediate-color) 50%);
+  background-size: 100% 200%;
 }
 
-/*.gradient-text {*/
-/*  background-clip: text;*/
-/*  -webkit-background-clip: text;*/
-/*  color: transparent;*/
-/*}*/
+.with_background {
+  background-position: bottom;
+}
+
+.without_background {
+  background-position: top;
+}
+
+a.active {
+  color: white;
+  /*background: var(--intermediate-color);*/
+  /*font-weight: lighter;*/
+  padding-top: 2px;
+  padding-bottom: 2px;
+  /*background-clip: text;*/
+  /*-webkit-background-clip: text;*/
+  /*color: transparent;*/
+}
 </style>

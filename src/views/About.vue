@@ -1,12 +1,12 @@
 <template>
-  <div class="about">
-    <h1>About me...</h1>
-    <UnderConstruction></UnderConstruction>
-  </div>
+  <ViewTab title="About me&hellip;" :under-construction="true">
+    <p>As you can probably already tell, I like css transitions, gradients, rounded corners, light fonts and the color blue</p>
+  </ViewTab>
 </template>
 <script>
-import UnderConstruction from "@/components/UnderConstruction";
+import ViewTab from "@/views/ViewTab";
+
 export default {
-  components: {UnderConstruction}
+  components: {ViewTab},
 }
 </script>
