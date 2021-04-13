@@ -89,35 +89,5 @@ export default {
 </script>
 
 <style scoped>
-.navbar {
-  padding: 30px 0;
-  /*background: linear-gradient(90deg, var(--primary-color) 576px, var(--secondary-color) 576px, var(--secondary-color) 636px, var(--primary-color) 636px);*/
-}
 
-.nav-link {
-  padding: 0 8px;
-  border-radius: 6px;
-  transition: all 250ms ease;
-  background: linear-gradient(to bottom, transparent 50%, var(--intermediate-color) 50%);
-  background-size: 100% 200%;
-}
-
-.with_background {
-  background-position: bottom;
-}
-
-.without_background {
-  background-position: top;
-}
-
-a.active {
-  color: white;
-  /*background: var(--intermediate-color);*/
-  /*font-weight: lighter;*/
-  padding-top: 2px;
-  padding-bottom: 2px;
-  /*background-clip: text;*/
-  /*-webkit-background-clip: text;*/
-  /*color: transparent;*/
-}
 </style>
