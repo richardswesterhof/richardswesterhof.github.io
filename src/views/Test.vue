@@ -4,6 +4,10 @@
   <ViewTab title="This page is used for testing new things">
     <h4>It is not meant to be in production</h4>
 
+    <font-awesome-icon :icon="['fas', 'circle']" class="gradient-icon"/>
+
+    <i class="material-icons gradient-icon">cloud</i>
+
     <div :class="'test_div ' + (isClicked ? 'with_background ' : 'without_background ')" style="border-color: black; border-width: 1px; border-style: solid">this has a rising background</div>
 
     <br>
@@ -32,6 +36,15 @@ export default {
 </script>
 
 <style scoped>
+
+.gradient-icon:before,
+.gradient-icon,
+.gradient-icon:after {
+  background: linear-gradient(to top, red, blue);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: initial; /* reset Font Awesome's display:inline-block */
+}
 
 .test_div {
   transition: all 0.75s ease;
