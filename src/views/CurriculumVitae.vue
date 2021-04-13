@@ -1,18 +1,17 @@
 <!-- Created by Richard on 15/03/2021-->
 
 <template>
-  <div>
-    <UnderConstruction/>
-    eventually I'll put my CV here as an embedded pdf
-  </div>
+  <ViewTab title="My CV:" :under-construction="false">
+    <p>eventually I'll put my CV here as an embedded pdf</p>
+  </ViewTab>
 </template>
 
 <script>
-import UnderConstruction from "@/components/UnderConstruction";
+import ViewTab from "@/views/ViewTab";
 
 export default {
   name: "CurriculumVitae",
-  components: {UnderConstruction},
+  components: {ViewTab},
 }
 </script>
 

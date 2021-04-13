@@ -90,7 +90,7 @@ export default {
 
 <style scoped>
 .navbar {
-  padding: 30px 10px 30px 10px;
+  padding: 30px 0;
   /*background: linear-gradient(90deg, var(--primary-color) 576px, var(--secondary-color) 576px, var(--secondary-color) 636px, var(--primary-color) 636px);*/
 }
 

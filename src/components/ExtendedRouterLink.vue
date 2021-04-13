@@ -26,7 +26,7 @@
 import { RouterLink } from 'vue-router'
 
 export default {
-  name: 'AppLink',
+  name: 'ExtendedRouterLink',
 
   props: {
     // add all of the default router-link props

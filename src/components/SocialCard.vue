@@ -1,7 +1,7 @@
 <!-- Created by Richard on 15/03/2021-->
 
 <template>
-  <!-- TODO: make this pretty (maybe? idk looks kinda alright the way it is right now tbh )-->
+  <!-- TODO: make this pretty (maybe? idk looks kinda alright the way it is right now tbh) -->
   <a :href="url" target="_blank">
     <font-awesome-icon :icon="icon" size="5x"></font-awesome-icon>
     <p style="margin-top: 6px">{{name}}</p>
