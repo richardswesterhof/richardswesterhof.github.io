@@ -12,3 +12,94 @@
     --light-blue-grey: #99aab5;
 
 }
+
+/* stuff to make transitions look very nice */
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+    transition-duration: 250ms;
+    transition-property: height, opacity, transform;
+    transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    overflow: hidden;
+}
+
+.slide-left-enter-from,
+.slide-right-leave-to {
+    opacity: 0;
+    transform: translate(2em, 0);
+    overflow: hidden;
+}
+
+.slide-left-leave-to,
+.slide-right-enter-from {
+    opacity: 0;
+    transform: translate(-2em, 0);
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    border-radius: 10px;
+    width: fit-content;
+    margin: 0 auto 16px auto;
+    padding: 4px 16px;
+    font-weight: 300;
+}
+
+h1 {
+    color: white;
+    background: rgb(44,62,80);
+    background: linear-gradient(135deg, rgba(44,62,80,1) 0%, rgba(80,129,185,1) 100%);
+}
+
+h5 {
+    padding: 4px 10px;
+    border-radius: 7px;
+    background: rgb(255,200,71);
+    background: linear-gradient(315deg, rgba(255,200,71,1) 50%, rgba(224,163,21,1) 100%);
+}
+
+h4 {
+    border-radius: 8px;
+    color: white;
+    background: rgb(255,10,10);
+    background: linear-gradient(315deg, rgba(255,10,10,1) 50%, rgba(117,2,2,1) 100%);
+}
+
+.navbar {
+    padding: 30px 0;
+    /*background: linear-gradient(90deg, var(--primary-color) 576px, var(--secondary-color) 576px, var(--secondary-color) 636px, var(--primary-color) 636px);*/
+}
+
+.nav-link {
+    padding: 0 8px;
+    border-radius: 6px;
+    transition: all 250ms ease;
+    background: linear-gradient(to bottom, transparent 50%, var(--intermediate-color) 50%);
+    background-size: 100% 200%;
+}
+
+.with_background {
+    background-position: bottom;
+}
+
+.without_background {
+    background-position: top;
+}
+
+a {
+    /*font-weight: 600;*/
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a.active {
+    color: white;
+    /*background: var(--intermediate-color);*/
+    /*font-weight: lighter;*/
+    padding-top: 2px;
+    padding-bottom: 2px;
+    /*background-clip: text;*/
+    /*-webkit-background-clip: text;*/
+    /*color: transparent;*/
+}
