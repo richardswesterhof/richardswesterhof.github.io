@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["tech"],{"0d67":function(e,n,t){"use strict";t.r(n);var c=t("7a23"),o=Object(c["G"])("data-v-713055bc"),a=o((function(e,n,t,o,a,i){var s=Object(c["z"])("ViewTab");return Object(c["r"])(),Object(c["e"])(s,{title:"Technologies used on this page:","under-construction":!0})})),i=t("953f"),s={name:"Technologies",components:{ViewTab:i["a"]}};s.render=a,s.__scopeId="data-v-713055bc";n["default"]=s}}]);
-//# sourceMappingURL=tech.08964f03.js.map
