@@ -2,8 +2,9 @@
 <!-- Eh not really, this is taken from the Vue Router documentation: https://next.router.vuejs.org/guide/advanced/extending-router-link.html -->
 
 <template>
-  <a v-if="isExternalLink" v-bind="$attrs" :href="to" target="_blank">
-    <slot />
+  <a v-if="isExternalLink" v-bind="$attrs" :href="to" target="_blank" class="external-link">
+    {{displayUrl ? to : ''}}
+    <slot/>
   </a>
   <router-link
       v-else
@@ -17,7 +18,8 @@
         @click="navigate"
         :class="isActive ? activeClass : inactiveClass"
     >
-      <slot />
+      {{displayUrl ? to : ''}}
+      <slot/>
     </a>
   </router-link>
 </template>
@@ -33,11 +35,16 @@ export default {
     ...RouterLink.props,
     // add new prop inactive-class
     inactiveClass: String,
+    displayUrl: {
+      type: Boolean,
+      required: false,
+      default: false,
+    }
   },
 
   computed: {
     isExternalLink() {
-      return typeof this.to === 'string' && this.to.startsWith('http')
+      return typeof this.to === 'string' && this.to.startsWith('http');
     },
   },
 }

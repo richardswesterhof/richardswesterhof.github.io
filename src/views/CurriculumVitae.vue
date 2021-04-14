@@ -1,7 +1,7 @@
 <!-- Created by Richard on 15/03/2021-->
 
 <template>
-  <ViewTab title="My CV:" :under-construction="false">
+  <ViewTab title="My CV:" :under-construction="true">
     <p>eventually I'll put my CV here as an embedded pdf</p>
   </ViewTab>
 </template>

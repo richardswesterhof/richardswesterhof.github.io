@@ -48,8 +48,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     color: white;
-    background: rgb(44,62,80);
-    background: linear-gradient(135deg, rgba(44,62,80,1) 0%, rgba(80,129,185,1) 100%);
+    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 }
 
 h5 {
@@ -72,34 +72,38 @@ h4 {
 }
 
 .nav-link {
-    padding: 0 8px;
+    padding: 2px 8px;
     border-radius: 6px;
     transition: all 250ms ease;
-    background: linear-gradient(to bottom, transparent 50%, var(--intermediate-color) 50%);
-    background-size: 100% 200%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) no-repeat bottom;
+    text-decoration: none;
 }
 
 .with_background {
-    background-position: bottom;
+    /*background-position: top;*/
+    background-size: 100% 100%;
 }
 
 .without_background {
-    background-position: top;
+    /*background-position: bottom;*/
+    background-size: 100% 0;
 }
 
 a {
     /*font-weight: 600;*/
     color: var(--primary-color);
-    text-decoration: none;
+    /*text-decoration: none;*/
 }
 
 a.active {
     color: white;
-    /*background: var(--intermediate-color);*/
-    /*font-weight: lighter;*/
-    padding-top: 2px;
-    padding-bottom: 2px;
-    /*background-clip: text;*/
-    /*-webkit-background-clip: text;*/
-    /*color: transparent;*/
+}
+
+a.external-link {
+    text-decoration-thickness: 1px;
+    transition: all 250ms ease;
+}
+
+a.external-link:hover {
+    color: var(--secondary-color);
 }
