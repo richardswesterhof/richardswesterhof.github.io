@@ -2,15 +2,17 @@
 
 <template>
   <!-- TODO: make this pretty (maybe? idk looks kinda alright the way it is right now tbh) -->
-  <a :href="url" target="_blank">
+  <extended-router-link :to="url">
     <font-awesome-icon :icon="icon" size="5x"></font-awesome-icon>
     <p style="margin-top: 6px">{{name}}</p>
-  </a>
+  </extended-router-link>
 </template>
 
 <script>
+import ExtendedRouterLink from "@/components/ExtendedRouterLink";
 export default {
   name: "SocialCard",
+  components: {ExtendedRouterLink},
   props: {
     icon: {
       type: Array,

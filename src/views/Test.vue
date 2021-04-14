@@ -48,31 +48,31 @@ export default {
 
 .test_div {
   transition: all 0.75s ease;
-  background: linear-gradient(to bottom, transparent 50%, blue 50%) bottom;
-  background-size: 100% 200%;
+  /*background: linear-gradient(to bottom, transparent 50%, blue 50%) bottom;*/
+  /*background: !*linear-gradient(rgba(250,25,84,1),rgba(28,25,84,1)) right/50% 100%,*!*/
+  background: linear-gradient(to top, red, blue) bottom;
+    /*linear-gradient(to bottom, transparent, transparent) calc(top - 50%)/100% 50%;*/
+  /*background-size: 100% 200%;*/
+  background-repeat: no-repeat;
 }
 
 .with_background {
-  background-position: top;
+  background-size: 100% 100%;
 }
 
 .without_background {
-  background-position: bottom;
+  background-size: 100% 0;
 }
 
 .topbar {
   height: 150px;
   background:
-
-    /* the markers*/
-      linear-gradient(yellow 0 0) 25% /2px 100%,
-      linear-gradient(yellow 0 0) 50% /2px 100%,
-      linear-gradient(yellow 0 0) 75% /2px 100%,
         /* the needed background*/
-      linear-gradient(-63deg, rgba(28,25,84,1) 50%,transparent 0) calc(50% - 100px) 0/200px 100%,
-      linear-gradient(rgba(28,25,84,1),rgba(28,25,84,1)) right/50% 100%,
-      linear-gradient(to bottom, red, blue);
+      linear-gradient(-63deg, rgba(28,25,84,1) 50%,transparent 50%) calc(50% - 100px) 10px/200px 100%,
+      /*linear-gradient(rgba(28,250,84,1),rgba(208,20,84,1)) left/50% 100%,*/
+      linear-gradient(to bottom, red, blue) top/100% 50%;
   background-repeat:no-repeat;
+  background-size: 100% 100%
 }
 
 </style>
